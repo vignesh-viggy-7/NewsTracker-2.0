@@ -37,7 +37,7 @@ def homePage():
 @app.route('/Entertainment')
 def EntertainmentPage():
     newsapi=NewsApiClient(api_key="02679fab562e426687c3640305415928")
-    topheadlines=newsapi.get_everything(q='entertainment')
+    topheadlines=newsapi.get_everything(q='movies')
     toparticles=topheadlines['articles']
 
     news=[]
@@ -81,7 +81,7 @@ def SportsPage():
 @app.route('/Technology')
 def TechnologyPage():
     newsapi=NewsApiClient(api_key="02679fab562e426687c3640305415928")
-    topheadlines=newsapi.get_everything(q='technology')
+    topheadlines=newsapi.get_everything(q='gadgets')
     toparticles=topheadlines['articles']
 
     news=[]
