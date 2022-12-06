@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: besafe
+ spec:
+   replicas: 5
+   selector:
+     matchLabels:
+       app: besafe
+   template:
+     metadata:
+       labels:
+         app: besafe
+     spec:
+       containers:
+       - name: besafe
+         image: jp.icr.io/containmentzone/besafe
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000
